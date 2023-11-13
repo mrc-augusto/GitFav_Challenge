@@ -1,0 +1,141 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root{
+  /* Colors */
+  --white: #fff;
+  --black: #000;
+  --placeholder: #7C7C8A;
+  --titles: #E1E1E6;
+  --rm-button: #F75A68;
+  --fav-button: #065E7C;
+  --table-border: #4A808C;
+  --light-row: #06181C;
+  --dark-row: #06161B80;
+  --table-header: #092D38;
+  
+  /* Font-Size */
+  font-size: 62.5%;
+}
+
+body{
+  padding: 11.5rem 16rem;
+  font-size: 1.6rem;
+  background: #000;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sr-only{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.search input{
+  width: 46rem;
+  padding: 1.6rem;
+  border-radius: .5rem;
+  background-color: var(--light-row);
+  border: none;
+  color: var(--white);
+  font-size: 1.6rem;
+}
+
+.search button{
+  display: flex;
+  padding: 12px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: var(--titles);
+  background: var(--fav-button);
+  border: none;
+  border-radius: .5rem;
+}
+
+.search button:hover{
+  background: var(--white);
+  color: var(--fav-button);
+}
+
+table{
+  margin-top: 9rem;
+  border-collapse: collapse;
+  border-radius: 1.2rem;
+  border: 1px solid var(--table-border);
+}
+
+tr{
+  background: var(--dark-row);
+}
+
+tr:nth-child(2n){
+  background: var(--light-row);
+  border: 1px solid var(--table-border);
+}
+
+table th{
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+  background: var(--table-header);
+  color: #ffff;
+}
+
+table td{
+  padding: 2.4rem 2.4rem 2.4rem 4rem;
+}
+
+table tbody tr .user{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.6rem;
+  width: 50rem;
+}
+
+table tbody tr td img{
+  width: 5.6rem;
+  border-radius: 50%;
+}
+
+table tbody tr td{
+  width: 22rem;
+  color: var(--titles);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+}
+
+table tbody tr td a{
+  text-decoration: none;
+  color: var(--titles);
+  font-weight: normal;
+}
+
+table tbody td button{
+  background: transparent;
+  border: none;
+  color: var(--rm-button);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+}
